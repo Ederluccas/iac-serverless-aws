@@ -1,0 +1,306 @@
+<mxfile host="app.diagrams.net" modified="2025-09-21T15:30:00.000Z" agent="5.0" etag="XYZ789" version="21.6.5" type="device">
+  <diagram name="AWS Serverless Architecture" id="aws-serverless-architecture">
+    <mxGraphModel dx="1422" dy="794" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        
+        <!-- AWS Cloud Background -->
+        <mxCell id="aws-cloud" value="" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF9900;strokeColor=#D86613;strokeWidth=3;shadow=1;opacity=10;" vertex="1" parent="1">
+          <mxGeometry x="200" y="120" width="1000" height="650" as="geometry"/>
+        </mxCell>
+        
+        <!-- AWS Cloud Label -->
+        <mxCell id="aws-label" value="☁️ Amazon Web Services (AWS)" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontStyle=1;fontColor=#D86613;" vertex="1" parent="1">
+          <mxGeometry x="220" y="85" width="300" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Title -->
+        <mxCell id="title" value="🏗️ Serverless Web Application - AWS Architecture" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=22;fontStyle=1;fontColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="200" y="30" width="1000" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- User/Client -->
+        <mxCell id="user-client" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.users;" vertex="1" parent="1">
+          <mxGeometry x="80" y="240" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="user-label" value="👥 Users" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=14;fontStyle=1;fontColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="89" y="328" width="60" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- Route 53 (DNS) -->
+        <mxCell id="route53" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#945DF2;gradientDirection=north;fillColor=#5A30B5;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.route_53;" vertex="1" parent="1">
+          <mxGeometry x="240" y="160" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="route53-label" value="🌐 Route 53&#xa;DNS Resolution" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#5A30B5;" vertex="1" parent="1">
+          <mxGeometry x="239" y="248" width="80" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- CloudFront CDN -->
+        <mxCell id="cloudfront" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F78E04;gradientDirection=north;fillColor=#D05C17;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudfront;" vertex="1" parent="1">
+          <mxGeometry x="420" y="160" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="cloudfront-label" value="⚡ CloudFront&#xa;Global CDN" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#D05C17;" vertex="1" parent="1">
+          <mxGeometry x="419" y="248" width="80" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- WAF (Web Application Firewall) -->
+        <mxCell id="waf" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F54749;gradientDirection=north;fillColor=#C7131F;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.waf;" vertex="1" parent="1">
+          <mxGeometry x="420" y="290" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="waf-label" value="🛡️ AWS WAF&#xa;Security Layer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#C7131F;" vertex="1" parent="1">
+          <mxGeometry x="419" y="378" width="80" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- S3 Bucket (Frontend) -->
+        <mxCell id="s3-frontend" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#60A337;gradientDirection=north;fillColor=#277116;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.s3;" vertex="1" parent="1">
+          <mxGeometry x="600" y="160" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="s3-frontend-label" value="🗂️ S3 Bucket&#xa;Static Website" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#277116;" vertex="1" parent="1">
+          <mxGeometry x="599" y="248" width="80" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- API Gateway -->
+        <mxCell id="api-gateway" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#945DF2;gradientDirection=north;fillColor=#5A30B5;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.api_gateway;" vertex="1" parent="1">
+          <mxGeometry x="780" y="240" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="api-gateway-label" value="🔌 API Gateway&#xa;REST API" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#5A30B5;" vertex="1" parent="1">
+          <mxGeometry x="779" y="328" width="80" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Lambda Function -->
+        <mxCell id="lambda" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F78E04;gradientDirection=north;fillColor=#D05C17;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.lambda;" vertex="1" parent="1">
+          <mxGeometry x="960" y="240" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="lambda-label" value="⚙️ Lambda&#xa;CRUD Functions" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#D05C17;" vertex="1" parent="1">
+          <mxGeometry x="959" y="328" width="80" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- DynamoDB -->
+        <mxCell id="dynamodb" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#4D72F3;gradientDirection=north;fillColor=#3334B9;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.dynamodb;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="240" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="dynamodb-label" value="🗃️ DynamoDB&#xa;NoSQL Database" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#3334B9;" vertex="1" parent="1">
+          <mxGeometry x="1139" y="328" width="80" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- CloudWatch Logs -->
+        <mxCell id="cloudwatch" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F34482;gradientDirection=north;fillColor=#BC1356;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.cloudwatch_2;" vertex="1" parent="1">
+          <mxGeometry x="960" y="400" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="cloudwatch-label" value="📊 CloudWatch&#xa;Logs & Metrics" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#BC1356;" vertex="1" parent="1">
+          <mxGeometry x="959" y="488" width="80" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- IAM Role -->
+        <mxCell id="iam" value="" style="sketch=0;points=[[0,0,0],[0.25,0,0],[0.5,0,0],[0.75,0,0],[1,0,0],[0,1,0],[0.25,1,0],[0.5,1,0],[0.75,1,0],[1,1,0],[0,0.25,0],[0,0.5,0],[0,0.75,0],[1,0.25,0],[1,0.5,0],[1,0.75,0]];outlineConnect=0;fontColor=#232F3E;gradientColor=#F54749;gradientDirection=north;fillColor=#C7131F;strokeColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.iam;" vertex="1" parent="1">
+          <mxGeometry x="780" y="400" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="iam-label" value="🔐 IAM Roles&#xa;Security Policies" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#C7131F;" vertex="1" parent="1">
+          <mxGeometry x="779" y="488" width="80" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Development Tools Section -->
+        <!-- GitHub -->
+        <mxCell id="github" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.github" vertex="1" parent="1">
+          <mxGeometry x="240" y="540" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="github-label" value="📚 GitHub&#xa;Version Control" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#24292e;" vertex="1" parent="1">
+          <mxGeometry x="215" y="600" width="100" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Terraform -->
+        <mxCell id="terraform" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#7B42BC;shape=mxgraph.mscae.enterprise.code_file" vertex="1" parent="1">
+          <mxGeometry x="370" y="540" width="50" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="terraform-label" value="🏗️ Terraform&#xa;Infrastructure as Code" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontStyle=1;fontColor=#7B42BC;" vertex="1" parent="1">
+          <mxGeometry x="320" y="600" width="150" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Developer -->
+        <mxCell id="developer" value="" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;fillColor=#232F3D;strokeColor=none;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;pointerEvents=1;shape=mxgraph.aws4.users;" vertex="1" parent="1">
+          <mxGeometry x="80" y="540" width="78" height="78" as="geometry"/>
+        </mxCell>
+        <mxCell id="developer-label" value="👨‍💻 Developer" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#232F3E;" vertex="1" parent="1">
+          <mxGeometry x="89" y="628" width="60" height="20" as="geometry"/>
+        </mxCell>
+        
+        <!-- Data Flow Connections -->
+        <!-- User to Route 53 -->
+        <mxCell id="conn1" value="1. DNS Query" style="endArrow=classic;html=1;rounded=0;strokeColor=#5A30B5;strokeWidth=3;fontColor=#5A30B5;fontSize=11;fontStyle=1;" edge="1" parent="1" source="user-client" target="route53">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="160" y="280" as="sourcePoint"/>
+            <mxPoint x="240" y="240" as="targetPoint"/>
+            <mxArray as="points">
+              <mxPoint x="180" y="199"/>
+            </mxArray>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Route 53 to CloudFront -->
+        <mxCell id="conn2" value="2. HTTPS Request" style="endArrow=classic;html=1;rounded=0;strokeColor=#D05C17;strokeWidth=3;fontColor=#D05C17;fontSize=11;fontStyle=1;" edge="1" parent="1" source="route53" target="cloudfront">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="318" y="199" as="sourcePoint"/>
+            <mxPoint x="420" y="199" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- CloudFront to S3 -->
+        <mxCell id="conn3" value="3. Origin Request&#xa;(OAC)" style="endArrow=classic;html=1;rounded=0;strokeColor=#277116;strokeWidth=2;fontColor=#277116;fontSize=11;fontStyle=1;" edge="1" parent="1" source="cloudfront" target="s3-frontend">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="498" y="199" as="sourcePoint"/>
+            <mxPoint x="600" y="199" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- CloudFront to API Gateway (for API calls) -->
+        <mxCell id="conn4" value="4. API Requests" style="endArrow=classic;html=1;rounded=0;strokeColor=#5A30B5;strokeWidth=3;fontColor=#5A30B5;fontSize=11;fontStyle=1;" edge="1" parent="1" source="cloudfront" target="api-gateway">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="500" y="240" as="sourcePoint"/>
+            <mxPoint x="780" y="279" as="targetPoint"/>
+            <mxArray as="points">
+              <mxPoint x="520" y="279"/>
+            </mxArray>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- API Gateway to Lambda -->
+        <mxCell id="conn5" value="5. Invoke Function" style="endArrow=classic;html=1;rounded=0;strokeColor=#D05C17;strokeWidth=3;fontColor=#D05C17;fontSize=11;fontStyle=1;" edge="1" parent="1" source="api-gateway" target="lambda">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="858" y="279" as="sourcePoint"/>
+            <mxPoint x="960" y="279" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Lambda to DynamoDB -->
+        <mxCell id="conn6" value="6. CRUD Operations" style="endArrow=classic;html=1;rounded=0;strokeColor=#3334B9;strokeWidth=3;fontColor=#3334B9;fontSize=11;fontStyle=1;" edge="1" parent="1" source="lambda" target="dynamodb">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1038" y="279" as="sourcePoint"/>
+            <mxPoint x="1140" y="279" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Lambda to CloudWatch -->
+        <mxCell id="conn7" value="7. Logs & Metrics" style="endArrow=classic;html=1;rounded=0;strokeColor=#BC1356;strokeWidth=2;fontColor=#BC1356;fontSize=11;fontStyle=1;" edge="1" parent="1" source="lambda" target="cloudwatch">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="999" y="318" as="sourcePoint"/>
+            <mxPoint x="999" y="400" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- IAM to Lambda -->
+        <mxCell id="conn8" value="Security Policies" style="endArrow=classic;html=1;rounded=0;strokeColor=#C7131F;strokeWidth=2;fontColor=#C7131F;fontSize=11;fontStyle=1;dashed=1;" edge="1" parent="1" source="iam" target="lambda">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="858" y="439" as="sourcePoint"/>
+            <mxPoint x="960" y="318" as="targetPoint"/>
+            <mxArray as="points">
+              <mxPoint x="900" y="360"/>
+            </mxArray>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- WAF Protection -->
+        <mxCell id="conn9" value="DDoS Protection" style="endArrow=classic;html=1;rounded=0;strokeColor=#C7131F;strokeWidth=2;fontColor=#C7131F;fontSize=11;fontStyle=1;dashed=1;" edge="1" parent="1" source="waf" target="cloudfront">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="459" y="290" as="sourcePoint"/>
+            <mxPoint x="459" y="238" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Development Flow -->
+        <!-- Developer to GitHub -->
+        <mxCell id="dev-conn1" value="Git Push" style="endArrow=classic;html=1;rounded=0;strokeColor=#24292e;strokeWidth=2;fontColor=#24292e;fontSize=10;fontStyle=1;" edge="1" parent="1" source="developer" target="github">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="158" y="579" as="sourcePoint"/>
+            <mxPoint x="240" y="565" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- GitHub to Terraform -->
+        <mxCell id="dev-conn2" value="CI/CD Trigger" style="endArrow=classic;html=1;rounded=0;strokeColor=#7B42BC;strokeWidth=2;fontColor=#7B42BC;fontSize=10;fontStyle=1;" edge="1" parent="1" source="github" target="terraform">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="290" y="565" as="sourcePoint"/>
+            <mxPoint x="370" y="565" as="targetPoint"/>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Terraform to AWS Cloud -->
+        <mxCell id="dev-conn3" value="Resource Provisioning" style="endArrow=classic;html=1;rounded=0;strokeColor=#7B42BC;strokeWidth=2;fontColor=#7B42BC;fontSize=10;fontStyle=1;" edge="1" parent="1" source="terraform" target="s3-frontend">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="420" y="540" as="sourcePoint"/>
+            <mxPoint x="600" y="240" as="targetPoint"/>
+            <mxArray as="points">
+              <mxPoint x="500" y="520"/>
+              <mxPoint x="639" y="520"/>
+              <mxPoint x="639" y="280"/>
+            </mxArray>
+          </mxGeometry>
+        </mxCell>
+        
+        <!-- Information Boxes -->
+        <!-- Architecture Features -->
+        <mxCell id="features-box" value="🎯 Serverless Architecture Features" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F4FD;strokeColor=#1565C0;fontSize=14;fontStyle=1;align=center;verticalAlign=top;fontColor=#0D47A1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="400" width="200" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="features-text" value="✅ Auto-scaling&#xa;✅ Pay-per-use&#xa;✅ Zero server management&#xa;✅ Global distribution&#xa;✅ Built-in high availability&#xa;✅ Integrated monitoring" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#0D47A1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="430" width="180" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Performance Metrics -->
+        <mxCell id="metrics-box" value="⚡ Performance Metrics" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF3E0;strokeColor=#F57C00;fontSize=14;fontStyle=1;align=center;verticalAlign=top;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="830" y="540" width="180" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="metrics-text" value="⏱️ Load Time: &lt;2s global&#xa;🚀 Cold Start: &lt;500ms&#xa;💰 Cost: $0-20/month&#xa;📈 Requests: 1M+/month&#xa;🔒 Uptime: 99.99%&#xa;🌍 Edge Locations: 450+" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#E65100;" vertex="1" parent="1">
+          <mxGeometry x="840" y="570" width="160" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Security Features -->
+        <mxCell id="security-box" value="� Security & Compliance" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFEBEE;strokeColor=#C62828;fontSize=14;fontStyle=1;align=center;verticalAlign=top;fontColor=#B71C1C;" vertex="1" parent="1">
+          <mxGeometry x="1040" y="400" width="180" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="security-text" value="🛡️ AWS WAF protection&#xa;🔐 IAM least privilege&#xa;🔑 API key authentication&#xa;📜 SSL/TLS encryption&#xa;🚨 DDoS mitigation&#xa;📊 Audit logs" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#B71C1C;" vertex="1" parent="1">
+          <mxGeometry x="1050" y="430" width="160" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Tech Stack -->
+        <mxCell id="techstack-box" value="🛠️ Technology Stack" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#E8F5E8;strokeColor=#2E7D32;fontSize=14;fontStyle=1;align=center;verticalAlign=top;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="500" y="540" width="200" height="120" as="geometry"/>
+        </mxCell>
+        <mxCell id="techstack-text" value="⚙️ Node.js 18.x Runtime&#xa;🏗️ Terraform v1.6+&#xa;🌐 HTML5 + CSS3 + JS&#xa;📱 Progressive Web App&#xa;🔄 GitHub Actions CI/CD&#xa;📊 CloudWatch Monitoring" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=11;fontColor=#1B5E20;" vertex="1" parent="1">
+          <mxGeometry x="510" y="570" width="180" height="80" as="geometry"/>
+        </mxCell>
+        
+        <!-- Request Flow Labels -->
+        <mxCell id="flow-label" value="📈 Request Flow (1-7)" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#1565C0;" vertex="1" parent="1">
+          <mxGeometry x="600" y="300" width="200" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Development Flow Label -->
+        <mxCell id="dev-flow-label" value="👨‍� Development Flow" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=16;fontStyle=1;fontColor=#7B42BC;" vertex="1" parent="1">
+          <mxGeometry x="240" y="500" width="200" height="30" as="geometry"/>
+        </mxCell>
+        
+        <!-- Footer Links -->
+        <mxCell id="footer-links" value="🔗 Project Links: github.com/Ederluccas/iac-serverless-aws | gitlab.com/Ederluccas/iac-serverless-aws | Demo: d3hg8r3vfucvhl.cloudfront.net" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=12;fontStyle=1;fontColor=#424242;" vertex="1" parent="1">
+          <mxGeometry x="200" y="700" width="1000" height="40" as="geometry"/>
+        </mxCell>
+        
+        <!-- Cost Optimization Badge -->
+        <mxCell id="free-tier-badge" value="💰 FREE TIER&#xa;OPTIMIZED" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#4CAF50;strokeColor=#2E7D32;fontColor=white;fontSize=12;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="160" width="78" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Performance Badge -->
+        <mxCell id="performance-badge" value="⚡ &lt;2s LOAD&#xa;GLOBALLY" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FF5722;strokeColor=#D84315;fontColor=white;fontSize=12;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="240" y="290" width="78" height="50" as="geometry"/>
+        </mxCell>
+        
+        <!-- Security Badge -->
+        <mxCell id="security-badge" value="🔒 ENTERPRISE&#xa;SECURITY" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#9C27B0;strokeColor=#6A1B9A;fontColor=white;fontSize=12;fontStyle=1;shadow=1;" vertex="1" parent="1">
+          <mxGeometry x="1140" y="360" width="78" height="50" as="geometry"/>
+        </mxCell>
+        
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
