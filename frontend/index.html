@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IaC Serverless AWS - Free Tier</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <i class="fas fa-cloud"></i>
+                <h1>IaC Serverless</h1>
+            </div>
+            <div class="header-controls">
+                <button id="theme-toggle" class="theme-toggle" aria-label="Alternar modo escuro">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="status-badge">
+                    <i class="fas fa-check-circle"></i>
+                    FREE TIER
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+        <!-- API Configuration Section -->
+        <section class="config-section">
+            <h2><i class="fas fa-cog"></i> Configuração da API</h2>
+            <div class="config-form">
+                <div class="form-group">
+                    <label for="apiUrl">URL da API:</label>
+                    <input type="text" id="apiUrl" placeholder="https://sua-api.execute-api.us-east-1.amazonaws.com/prod">
+                    <small>Cole aqui a URL do API Gateway (output do Terraform)</small>
+                </div>
+                <div class="form-group">
+                    <label for="apiKey">API Key:</label>
+                    <input type="password" id="apiKey" placeholder="Sua API Key">
+                    <small>API Key gerada pelo Terraform (sensível)</small>
+                </div>
+                <button id="testConnection" class="btn btn-test">
+                    <i class="fas fa-plug"></i> Testar Conexão
+                </button>
+            </div>
+        </section>
+
+        <!-- Connection Status -->
+        <div id="connectionStatus" class="status-message" style="display: none;"></div>
+
+        <!-- User Management Section -->
+        <section class="users-section">
+            <div class="section-header">
+                <h2><i class="fas fa-users"></i> Gerenciamento de Usuários</h2>
+                <button id="refreshUsers" class="btn btn-secondary">
+                    <i class="fas fa-sync-alt"></i> Atualizar
+                </button>
+            </div>
+
+            <!-- Add User Form -->
+            <div class="user-form">
+                <h3>Adicionar Novo Usuário</h3>
+                <form id="addUserForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="userName">Nome:</label>
+                            <input type="text" id="userName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="userEmail">Email:</label>
+                            <input type="email" id="userEmail" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-plus"></i> Adicionar
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Users List -->
+            <div class="users-list">
+                <h3>Lista de Usuários</h3>
+                <div id="usersContainer">
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        Configure a API acima para visualizar usuários
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Free Tier Info -->
+        <section class="info-section">
+            <h2><i class="fas fa-info-circle"></i> Informações FREE TIER</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <i class="fas fa-server"></i>
+                    <h4>API Gateway</h4>
+                    <p>1M requests/mês<br>10 req/seg</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-bolt"></i>
+                    <h4>Lambda</h4>
+                    <p>1M invocações/mês<br>128MB RAM</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-database"></i>
+                    <h4>DynamoDB</h4>
+                    <p>25GB storage<br>Pay-per-request</p>
+                </div>
+                <div class="info-card">
+                    <i class="fas fa-globe"></i>
+                    <h4>CloudFront</h4>
+                    <p>1TB transfer/mês<br>10M requests</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 IaC Serverless AWS - Arquitetura FREE TIER com Terraform</p>
+            <div class="footer-links">
+                <a href="https://aws.amazon.com/free/" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> AWS Free Tier
+                </a>
+                <a href="https://terraform.io/" target="_blank">
+                    <i class="fas fa-external-link-alt"></i> Terraform
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

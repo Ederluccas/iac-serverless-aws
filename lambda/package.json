@@ -1,0 +1,15 @@
+{
+  "name": "iac-serverless-lambda",
+  "version": "1.0.0",
+  "description": "FREE TIER Lambda function for serverless API",
+  "main": "index.js",
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.x",
+    "@aws-sdk/lib-dynamodb": "^3.x"
+  },
+  "engines": {
+    "node": ">=18.x"
+  },
+  "keywords": ["aws", "lambda", "dynamodb", "free-tier"],
+  "license": "MIT"
+}
