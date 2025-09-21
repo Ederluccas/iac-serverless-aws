@@ -1,5 +1,7 @@
 # 🚀 IaC Serverless AWS - FREE TIER
 
+ACESSE AQUI: https://d3hg8r3vfucvhl.cloudfront.net/
+
 ![AWS](https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white)
 ![Terraform](https://img.shields.io/badge/terraform-%235835CC.svg?style=for-the-badge&logo=terraform&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
