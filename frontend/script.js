@@ -2,8 +2,9 @@
 
 class ServerlessApp {
     constructor() {
-        this.apiUrl = 'https://68qnphjcte.execute-api.ap-southeast-2.amazonaws.com/prod';
-        this.apiKey = '3NaNVleQaq3zU9aVOVyr485qceYpDw4d3fW0NB0M';
+        // Initialize with empty values - users need to configure with their Terraform outputs
+        this.apiUrl = '';
+        this.apiKey = '';
         this.init();
     }
 
@@ -23,6 +24,11 @@ class ServerlessApp {
         // Test Connection
         document.getElementById('testConnection').addEventListener('click', () => {
             this.testConnection();
+        });
+
+        // Clear Configuration
+        document.getElementById('clearConfig').addEventListener('click', () => {
+            this.clearConfiguration();
         });
 
         // Add User Form
@@ -48,7 +54,7 @@ class ServerlessApp {
 
     showWelcomeMessage() {
         this.showStatus('info', 'fa-info-circle', 
-            'Bem-vindo! Configure a URL da API e API Key acima para começar a usar a aplicação.');
+            '🚀 Bem-vindo ao IaC Serverless AWS! Para usar sua própria infraestrutura, configure a URL da API e API Key obtidas do comando "terraform output" acima.');
     }
 
     loadConfig() {
@@ -77,6 +83,35 @@ class ServerlessApp {
         
         localStorage.setItem('serverless_api_url', this.apiUrl);
         localStorage.setItem('serverless_api_key', this.apiKey);
+    }
+
+    clearConfiguration() {
+        // Confirm before clearing
+        if (confirm('Tem certeza que deseja limpar toda a configuração? Isso irá remover a URL da API e API Key salvos.')) {
+            // Clear form fields
+            document.getElementById('apiUrl').value = '';
+            document.getElementById('apiKey').value = '';
+            
+            // Clear instance variables
+            this.apiUrl = '';
+            this.apiKey = '';
+            
+            // Clear localStorage
+            localStorage.removeItem('serverless_api_url');
+            localStorage.removeItem('serverless_api_key');
+            
+            // Clear users list
+            document.getElementById('usersContainer').innerHTML = `
+                <div class="loading">
+                    <i class="fas fa-cog"></i>
+                    Configure a API acima para visualizar usuários
+                </div>
+            `;
+            
+            // Show status message
+            this.showStatus('info', 'fa-info-circle', 
+                '🧹 Configuração limpa! Configure a API novamente para usar a aplicação.');
+        }
     }
 
     async testConnection() {

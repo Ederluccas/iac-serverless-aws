@@ -137,15 +137,35 @@ terraform plan
 terraform apply -auto-approve
 ```
 
-### 4. Upload do frontend
+### 4. Configure a API com seus outputs do Terraform
 ```bash
-# O nome do bucket será exibido no output do Terraform
-aws s3 cp frontend/ s3://<bucket-name>/ --recursive
+# Método 1: Script automatizado (recomendado)
+./configure-api.sh        # Linux/Mac
+# OU
+.\configure-api.ps1       # Windows
+
+# Método 2: Manual via interface web
+# 1. Obtenha os valores:
+terraform output api_gateway_url
+terraform output -raw api_key
+
+# 2. Abra sua aplicação no CloudFront
+terraform output cloudfront_domain
+
+# 3. Configure na seção "Configuração da API"
 ```
 
-### 5. Acesse sua aplicação
+### 5. Upload do frontend (se necessário)
+```bash
+# O script configure-api já faz isso, mas se necessário:
+BUCKET=$(terraform output -raw s3_bucket_name)
+aws s3 cp frontend/ s3://$BUCKET/ --recursive
 ```
-CloudFront URL será exibida no output do Terraform
+
+### 6. Acesse sua aplicação
+```bash
+# A URL será exibida no output do Terraform
+terraform output cloudfront_domain
 ```
 
 ## 📁 Estrutura do Projeto
@@ -257,10 +277,18 @@ variable "environment" {
 ### Configuração da API
 ```javascript
 // frontend/script.js
+// NÃO use valores hardcoded! Configure através da interface web ou:
 constructor() {
+    // Obtenha estes valores com:
+    // terraform output api_gateway_url
+    // terraform output -raw api_key
     this.apiUrl = 'https://your-api-id.execute-api.region.amazonaws.com/prod';
-    this.apiKey = 'your-api-key';
+    this.apiKey = 'your-api-key-from-terraform';
 }
+
+// OU use o script automatizado:
+// ./configure-api.sh (Linux/Mac)
+// .\configure-api.ps1 (Windows)
 ```
 
 ## 🧪 Testando a Aplicação
