@@ -135,7 +135,7 @@ resource "aws_api_gateway_method" "get_users" {
   rest_api_id      = aws_api_gateway_rest_api.api.id
   resource_id      = aws_api_gateway_resource.users.id
   http_method      = "GET"
-  authorization    = "AWS_IAM" # Mudança: requer autenticação IAM
+  authorization    = "NONE"    # Alterado para usar apenas API Key
   api_key_required = true      # Requer API Key
 
   request_parameters = {
@@ -149,7 +149,7 @@ resource "aws_api_gateway_method" "post_users" {
   rest_api_id      = aws_api_gateway_rest_api.api.id
   resource_id      = aws_api_gateway_resource.users.id
   http_method      = "POST"
-  authorization    = "AWS_IAM" # Requer autenticação IAM
+  authorization    = "NONE"    # Alterado para usar apenas API Key
   api_key_required = true      # Requer API Key
 
   request_validator_id = aws_api_gateway_request_validator.validator.id
@@ -163,7 +163,7 @@ resource "aws_api_gateway_method" "get_user_by_id" {
   rest_api_id      = aws_api_gateway_rest_api.api.id
   resource_id      = aws_api_gateway_resource.user_by_id.id
   http_method      = "GET"
-  authorization    = "AWS_IAM"
+  authorization    = "NONE"    # Alterado para usar apenas API Key
   api_key_required = true
 
   request_parameters = {
@@ -260,7 +260,7 @@ resource "aws_api_gateway_integration_response" "options_200" {
   response_parameters = {
     "method.response.header.Access-Control-Allow-Headers" = "'Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token'"
     "method.response.header.Access-Control-Allow-Methods" = "'GET,POST,OPTIONS'"
-    "method.response.header.Access-Control-Allow-Origin"  = "'*'" # Configure conforme necessário
+    "method.response.header.Access-Control-Allow-Origin"  = "'https://d3hg8r3vfucvhl.cloudfront.net,http://localhost:3000,http://127.0.0.1:5500'" # Domínios específicos
   }
 }
 

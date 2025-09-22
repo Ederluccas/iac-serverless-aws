@@ -81,3 +81,5 @@ test-theme.html
 # Backup files
 *.bak
 *.backup
+*.drawio
+*.md
